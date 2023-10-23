@@ -42,7 +42,7 @@ public class SceneHandler : MonoBehaviour
         PauseGameScript.gamePaused = false;
         fade.CrossFadeAlpha(255, 1, true);
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("Menu");
     }
 }
 

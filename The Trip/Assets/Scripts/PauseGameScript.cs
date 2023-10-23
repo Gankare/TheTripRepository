@@ -23,6 +23,7 @@ public class PauseGameScript : MonoBehaviour
             //do this in some other way to not get bugs
             Time.timeScale = 0;
         }
+        else Time.timeScale = 1;
     }   
     public void Resume()
     {

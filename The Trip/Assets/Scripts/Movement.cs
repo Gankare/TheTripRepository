@@ -9,8 +9,9 @@ public class Movement : MonoBehaviour
     public float deacceleration = 4; //brake power
 
     //Jump variables
-    public float jumpPower = 8;
+    public float jumpPower = 10;
     public float groundCheckDistance = 0.1f;
+    float jumpButtonPressedTime;
     bool onGround = true;
     float groundCheckLenght;
 
@@ -34,9 +35,10 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && onGround)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+            jumpButtonPressedTime = Time.time;
         }
 
-        if (Input.GetButtonUp("Jump") && rb2D.velocity.y > 0)
+        if (Input.GetButtonUp("Jump") && rb2D.velocity.y > 0 && Time.time - jumpButtonPressedTime <= 0.1)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y * 0.25f);
         }
@@ -50,12 +52,17 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            rb2D.gravityScale = 1;
+            rb2D.gravityScale = 2;
         }
     }
 
     private void MovementX()
     {
+        if (!onGround)
+            acceleration = 10;
+        else
+            acceleration = 20;
+
         //Get the raw input
         float x = Input.GetAxisRaw("Horizontal");
 

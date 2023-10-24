@@ -36,6 +36,10 @@ public class GrabOjectScript : MonoBehaviour
         {
             grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
             grabbedObject.transform.SetParent(null);
+            if (Movement.rightDirection)
+                grabbedObject.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 5);
+            else
+                grabbedObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 5);
             grabbedObject = null;
         }
     }

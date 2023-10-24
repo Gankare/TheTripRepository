@@ -4,6 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private SpriteRenderer sprite;
+    public static bool rightDirection;
     //Public variables that wer can edit in the editor
     public float maxSpeed = 5; //Our max speed
     public float acceleration = 20; //How fast we accelerate
@@ -87,8 +88,14 @@ public class Movement : MonoBehaviour
         rb2D.velocity = new Vector2(velocityX, rb2D.velocity.y);
 
         if (rb2D.velocity.x < 0)
+        {
+            rightDirection = false;
             transform.eulerAngles = new Vector3(0, -180, 0);
+        }
         else if (rb2D.velocity.x > 0)
+        {
+            rightDirection = true;
             transform.eulerAngles = new Vector3(0,0,0);
+        }
     }
 }

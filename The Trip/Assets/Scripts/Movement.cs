@@ -3,11 +3,11 @@ using UnityEngine;
 //This script is a clean powerful solution to a top-down movement player
 public class Movement : MonoBehaviour
 {
+    private SpriteRenderer sprite;
     //Public variables that wer can edit in the editor
     public float maxSpeed = 5; //Our max speed
     public float acceleration = 20; //How fast we accelerate
     public float deacceleration = 4; //brake power
-
     //Jump variables
     public float jumpPower = 10;
     public float groundCheckDistance = 0.1f;
@@ -21,6 +21,8 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
+
         Physics2D.queriesStartInColliders = false;
         rb2D = GetComponent<Rigidbody2D>(); //assign our ref.
 
@@ -83,5 +85,10 @@ public class Movement : MonoBehaviour
 
         //Now we can move with the rigidbody and we get propper collisions
         rb2D.velocity = new Vector2(velocityX, rb2D.velocity.y);
+
+        if (rb2D.velocity.x < 0)
+            transform.eulerAngles = new Vector3(0, -180, 0);
+        else if (rb2D.velocity.x > 0)
+            transform.eulerAngles = new Vector3(0,0,0);
     }
 }

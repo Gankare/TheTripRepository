@@ -3,6 +3,9 @@ using UnityEngine;
 //This script is a clean powerful solution to a top-down movement player
 public class Movement : MonoBehaviour
 {
+    //Animation
+    private Animator animator;
+    //For player facing direction
     private SpriteRenderer sprite;
     public static bool rightDirection;
     //Public variables that wer can edit in the editor
@@ -22,6 +25,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
         Physics2D.queriesStartInColliders = false;
@@ -37,6 +41,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && onGround)
         {
+            animator.SetTrigger("Jumping");
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
             jumpButtonPressedTime = Time.time;
         }
@@ -48,6 +53,16 @@ public class Movement : MonoBehaviour
 
         onGround = Physics2D.Raycast(transform.position, Vector2.down, groundCheckLenght);
 
+        if (rb2D.velocity.x > -0.3f && rb2D.velocity.x < 0.3f && onGround)
+        {
+            animator.SetBool("IsWalking", false);   
+            Debug.Log("still");
+        }
+        else if (onGround)
+        {
+            Debug.Log("walking");
+            animator.SetBool("IsWalking", true);
+        }
 
         if (rb2D.velocity.y < 0)
         {
@@ -61,6 +76,18 @@ public class Movement : MonoBehaviour
 
     private void MovementX()
     {
+        //Lower movement speed when holding a object
+        if (GrabOjectScript.holding)
+        {
+            maxSpeed = 2.5f;
+            jumpPower = 7.5f;
+        }
+        else
+        {
+            maxSpeed = 5;
+            jumpPower = 10;
+        }
+
         if (!onGround)
             acceleration = 10;
         else

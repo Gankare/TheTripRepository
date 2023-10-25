@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LevelTeleport : MonoBehaviour
 {
-    public int currentLevel = 1;
+    public GameObject mainCamera;
     public Transform area1;
     public Transform area2;
     public Transform area3;
@@ -15,25 +15,27 @@ public class LevelTeleport : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if ( currentLevel == 1)
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 1)
             {
                 collision.transform.position = area1.transform.position;
             }
-            
-            if ( currentLevel == 2)
+
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 2)
             {
                 collision.transform.position = area2.transform.position;
             }
-            
-            if ( currentLevel == 3)
+
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 3)
             {
                 collision.transform.position = area3.transform.position;
             }
-            
-            if ( currentLevel == 4)
+
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 4)
             {
                 collision.transform.position = area4.transform.position;
             }
+
+            mainCamera.GetComponent<CameraFollow>().currentStage++;
         }
     }
 }

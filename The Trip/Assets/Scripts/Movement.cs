@@ -85,7 +85,7 @@ public class Movement : MonoBehaviour
         else
         {
             maxSpeed = 5;
-            jumpPower = 15;
+            jumpPower = 10;
         }
 
         if (!onGround)

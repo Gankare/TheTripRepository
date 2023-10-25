@@ -33,6 +33,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+
         MovementX();
 
         if (Input.GetButtonDown("Jump") && onGround)
@@ -98,4 +99,5 @@ public class Movement : MonoBehaviour
             transform.eulerAngles = new Vector3(0,0,0);
         }
     }
+
 }

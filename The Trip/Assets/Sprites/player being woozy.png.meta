@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: player being woozy_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 314
+        width: 54
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cf4baece393c0448b5158486e783c5
+      internalID: -856594576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 314
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862a31e9443866149b75d2e8ae6569ea
+      internalID: 1603642507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_3
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 314
+        width: 55
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f98c291dc7fd142bf89e48fca22991
+      internalID: -1195657881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_5
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 314
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5485df7fb96da24d914ed90fed616f1
+      internalID: 1337653559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 214
+        width: 54
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455df2bef194b45488e0d1700deb5363
+      internalID: 1246444027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_8
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 214
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0d97a86f8468b4f91fc219c53bbe66
+      internalID: 2015477280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 214
+        width: 55
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134c70b56ffa7f342a51cb60810036d4
+      internalID: -1807945647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_12
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 214
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97093a491ceb4146af30ac7f7e66bbc
+      internalID: -974663218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_14
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 114
+        width: 54
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8e53bc8f0b5d34bbb72bbcb3b9f7c5
+      internalID: 1634052435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_15
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 114
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1818fd07f63144f947a1a4f8d36174
+      internalID: -1116988445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_17
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 114
+        width: 55
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4050456afaaebc94e9a89db819f111ac
+      internalID: 443702748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_19
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 114
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a27e5e08464774f831112fa6c8adc2
+      internalID: -1128296501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_21
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 14
+        width: 54
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc38aebeec4e96f49830f5d5417d774c
+      internalID: -145423328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_22
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 14
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6963c2b38d9d7441a693fabea574075
+      internalID: 1734382558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_24
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 14
+        width: 55
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e588e41a21734c4daaa42f1e9380a40
+      internalID: 875011985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player being woozy_26
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 14
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de07847e4fb7e74193d9098e4f17a15
+      internalID: 573655695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +468,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player being woozy_0: -856594576
+      player being woozy_1: 1603642507
+      player being woozy_10: -1807945647
+      player being woozy_11: 1955783932
+      player being woozy_12: -974663218
+      player being woozy_13: -1558103428
+      player being woozy_14: 1634052435
+      player being woozy_15: -1116988445
+      player being woozy_16: 875028789
+      player being woozy_17: 443702748
+      player being woozy_18: -1665322004
+      player being woozy_19: -1128296501
+      player being woozy_2: -2125391298
+      player being woozy_20: -152855395
+      player being woozy_21: -145423328
+      player being woozy_22: 1734382558
+      player being woozy_23: 908360876
+      player being woozy_24: 875011985
+      player being woozy_25: 2050584705
+      player being woozy_26: 573655695
+      player being woozy_27: 1175633816
+      player being woozy_3: -1195657881
+      player being woozy_4: -1508448839
+      player being woozy_5: 1337653559
+      player being woozy_6: -1757869882
+      player being woozy_7: 1246444027
+      player being woozy_8: 2015477280
+      player being woozy_9: 583615228
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

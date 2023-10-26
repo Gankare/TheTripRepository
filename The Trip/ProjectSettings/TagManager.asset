@@ -42,3 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BACKGROUND
+    uniqueID: 2753277171
+    locked: 0
+  - name: FAR
+    uniqueID: 1861587523
+    locked: 0
+  - name: MIDDLE
+    uniqueID: 382228159
+    locked: 0
+  - name: CLOSE
+    uniqueID: 177263975
+    locked: 0
+  - name: CLOSEST
+    uniqueID: 2566173651
+    locked: 0

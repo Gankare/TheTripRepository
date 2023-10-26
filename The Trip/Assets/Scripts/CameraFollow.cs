@@ -46,7 +46,7 @@ public class CameraFollow : MonoBehaviour
                 Mathf.Clamp(player.position.z, minValues.z, maxValue.z));
 
         Vector3 newPos = new Vector3(player.position.x, player.position.y + yOffset, -10f);
-        transform.position = Vector3.Slerp(transform.position, boundPosition, FollowSpeed * Time.deltaTime);
+        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
 
     }
 }

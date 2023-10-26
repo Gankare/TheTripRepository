@@ -57,11 +57,9 @@ public class Movement : MonoBehaviour
         if (rb2D.velocity.x > -0.3f && rb2D.velocity.x < 0.3f && onGround)
         {
             animator.SetBool("IsWalking", false);   
-            Debug.Log("still");
         }
         else if (onGround)
         {
-            Debug.Log("walking");
             animator.SetBool("IsWalking", true);
         }
 

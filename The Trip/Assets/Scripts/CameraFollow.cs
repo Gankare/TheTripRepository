@@ -9,7 +9,13 @@ public class CameraFollow : MonoBehaviour
     public float yOffset = 1f;
     public Transform player;
     public Vector3 minValues, maxValue;
+    public GameObject bounds1;
+    public GameObject bounds2;
+    public GameObject bounds3;
+    public GameObject bounds4;
     public int currentStage = 1;
+    float width;
+    float height;
 
     // Update is called once per frame
     void Update()
@@ -17,16 +23,31 @@ public class CameraFollow : MonoBehaviour
         switch (currentStage)
         {
             case 1:
-                minValues = new Vector3(-5.2f, -2.1f, -10f);
-                maxValue = new Vector3(16.47f, 8.4f, -10f);
+                width = bounds1.GetComponent<SpriteRenderer>().bounds.size.x;
+                height = bounds1.GetComponent<SpriteRenderer>().bounds.size.y;
+
+                minValues = new Vector3(bounds1.transform.position.x - width / 4,
+                    bounds1.transform.position.y - height / 2, -10f);
+                maxValue = new Vector3(bounds1.transform.position.x + width / 4,
+                    bounds1.transform.position.y + height / 2, -10f);
                 break;
             case 2:
-                minValues = new Vector3(84.95f, -1.65f, -10f);
-                maxValue = new Vector3(106.81f, 10.5f,-10f);
+                width = bounds2.GetComponent<SpriteRenderer>().bounds.size.x;
+                height = bounds2.GetComponent<SpriteRenderer>().bounds.size.y;
+
+                minValues = new Vector3(bounds2.transform.position.x - width / 4,
+                    bounds2.transform.position.y - height / 2, -10f);
+                maxValue = new Vector3(bounds2.transform.position.x + width / 4,
+                    bounds2.transform.position.y + height / 2, -10f);
                 break;
             case 3:
-                minValues = new Vector3(-1000f, -1000f, -10f);
-                maxValue = new Vector3(1000f, 1000f, -10f);
+                width = bounds3.GetComponent<SpriteRenderer>().bounds.size.x;
+                height = bounds3.GetComponent<SpriteRenderer>().bounds.size.y;
+
+                minValues = new Vector3(bounds3.transform.position.x - width / 4,
+                    bounds3.transform.position.y - height / 2, -10f);
+                maxValue = new Vector3(bounds3.transform.position.x + width / 4,
+                    bounds3.transform.position.y + height / 2, -10f);
                 break;
             case 4:
                 minValues = new Vector3(-1000f, -1000f, -10f);
@@ -45,8 +66,13 @@ public class CameraFollow : MonoBehaviour
                 Mathf.Clamp(player.position.y, minValues.y, maxValue.y),
                 Mathf.Clamp(player.position.z, minValues.z, maxValue.z));
 
+<<<<<<< Updated upstream
         Vector3 newPos = new Vector3(player.position.x, player.position.y + yOffset, -10f);
         transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+=======
+        //Vector3 newPos = new Vector3(player.position.x, player.position.y + yOffset, -10f);
+        transform.position = Vector3.Slerp(transform.position, boundPosition, FollowSpeed * Time.deltaTime);
+>>>>>>> Stashed changes
 
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
+    public GameObject mainCamera;
     public HealthBar healthBar;
     [SerializeField] private float maxHealth;
     private float currentHealth;
@@ -21,6 +22,12 @@ public class BossMovement : MonoBehaviour
         {
             BossDefeated();
         }
+        /*
+        if(mainCamera.GetComponent<CameraFollow>().currentStage == 5)
+        {
+
+        }
+        */
     }
 
     public void DamageTaken(float damage)

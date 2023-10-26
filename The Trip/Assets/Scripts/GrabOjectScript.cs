@@ -6,7 +6,7 @@ public class GrabOjectScript : MonoBehaviour
 {
     [SerializeField]
     private float rayDistance;
-
+    public static bool holding;
     public Transform holdPoint, rayPoint;
     private GameObject grabbedObject;
 
@@ -25,16 +25,21 @@ public class GrabOjectScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && grabbedObject == null)
             {
+                holding = true;
                 grabbedObject = hit.collider.gameObject;
                 grabbedObject.transform.position = holdPoint.position;
                 grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 grabbedObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 grabbedObject.transform.SetParent(transform);
+                grabbedObject.GetComponentInParent<Animator>().SetBool("Holding", true);
             }
         }
         if (Input.GetKeyUp(KeyCode.LeftShift) && grabbedObject != null)
         {
+            holding = false;
             grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            grabbedObject.GetComponentInParent<Animator>().SetBool("Holding", false);
+            grabbedObject.GetComponentInParent<Animator>().SetTrigger("Throwing");
             grabbedObject.transform.SetParent(null);
             if (Movement.rightDirection)
                 grabbedObject.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 5);

@@ -842,6 +842,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 434966772}
     - target: {fileID: 6480884613743115991, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87879777}
+    - target: {fileID: 6480884613743115991, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1146346773}
@@ -1054,6 +1058,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 434966772}
     - target: {fileID: 6480884613743115991, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87879777}
+    - target: {fileID: 6480884613743115991, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1146346773}
@@ -1135,6 +1143,10 @@ PrefabInstance:
       propertyPath: area4
       value: 
       objectReference: {fileID: 434966772}
+    - target: {fileID: 6480884613743115991, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87879777}
     - target: {fileID: 6480884613743115991, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
       propertyPath: mainCamera
       value: 
@@ -7737,7 +7749,7 @@ Transform:
   m_GameObject: {fileID: 1146346773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -61.07, y: -4.28, z: -10}
+  m_LocalPosition: {x: -54.6, y: -5.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15287,6 +15299,10 @@ PrefabInstance:
       propertyPath: area4
       value: 
       objectReference: {fileID: 434966772}
+    - target: {fileID: 8607395043371332939, guid: 2e512797a780f1c4886200d5b809f055, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87879777}
     - target: {fileID: 8607395043371332939, guid: 2e512797a780f1c4886200d5b809f055, type: 3}
       propertyPath: mainCamera
       value: 

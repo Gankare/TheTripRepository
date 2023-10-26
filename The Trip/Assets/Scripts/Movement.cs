@@ -37,7 +37,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-
+        if(!LevelTeleport.cutScene) 
         MovementX();
 
         if (Input.GetButtonDown("Jump") && onGround)
@@ -84,7 +84,7 @@ public class Movement : MonoBehaviour
         else
         {
             maxSpeed = 6;
-            jumpPower = 10.5f;
+            jumpPower = 10.6f;
         }
 
         if (!onGround)

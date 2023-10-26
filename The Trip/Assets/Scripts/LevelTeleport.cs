@@ -12,6 +12,7 @@ public class LevelTeleport : MonoBehaviour
     public Transform area2;
     public Transform area3;
     public Transform area4;
+    public Transform area5;
 
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -38,6 +39,11 @@ public class LevelTeleport : MonoBehaviour
                 if (mainCamera.GetComponent<CameraFollow>().currentStage == 4)
                 {
                     collision.transform.position = area4.transform.position;
+                }
+
+                if (mainCamera.GetComponent<CameraFollow>().currentStage == 5)
+                {
+                    collision.transform.position = area5.transform.position;
                 }
 
                 mainCamera.GetComponent<CameraFollow>().currentStage++;

@@ -14,6 +14,7 @@ public class CameraFollow : MonoBehaviour
     public GameObject bounds2;
     public GameObject bounds3;
     public GameObject bounds4;
+    public GameObject bounds5;
     public int currentStage = 1;
     float width;
     float height;
@@ -67,6 +68,15 @@ public class CameraFollow : MonoBehaviour
                     bounds4.transform.position.y - height / 2, -10f);
                 maxValue = new Vector3(bounds4.transform.position.x + width / 4,
                     bounds4.transform.position.y + height / 2, -10f);
+                break;
+            case 6:
+                width = bounds5.GetComponent<SpriteRenderer>().bounds.size.x;
+                height = bounds5.GetComponent <SpriteRenderer>().bounds.size.y;
+
+                minValues = new Vector3(bounds5.transform.position.x - width / 4,
+                    bounds5.transform.position.y - height / 2, -10f);
+                maxValue = new Vector3(bounds5.transform.position.x + width / 4,
+                    bounds5.transform.position.y + height / 2, -10f);
                 break;
 
             default:

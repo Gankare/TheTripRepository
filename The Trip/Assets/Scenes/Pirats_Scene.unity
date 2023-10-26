@@ -542,6 +542,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9154189415174970908, guid: 2e4e01135df6ef34aa17f0eae71730b7, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154189415174970908, guid: 2e4e01135df6ef34aa17f0eae71730b7, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154189415174970908, guid: 2e4e01135df6ef34aa17f0eae71730b7, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154189415174970908, guid: 2e4e01135df6ef34aa17f0eae71730b7, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154189415174970908, guid: 2e4e01135df6ef34aa17f0eae71730b7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154189415174970908, guid: 2e4e01135df6ef34aa17f0eae71730b7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2325,6 +2349,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e4e01135df6ef34aa17f0eae71730b7, type: 3}
+--- !u!1001 &1673928020
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5164
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.6242
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 382539835007537936, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5992774499112580761, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
+      propertyPath: m_Name
+      value: MushroomProjectile
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6978b7a02698d4a40a14c477b22922fb, type: 3}
 --- !u!1 &1746190419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 356717427270b0143bacec96b9c9ad8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FollowSpeed: 2
+  yOffset: 1
   player: {fileID: 362823536}
+  minValues: {x: 0, y: 0, z: 0}
+  maxValue: {x: 0, y: 0, z: 0}
+  currentStage: 1
 --- !u!81 &2114652502
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3245,6 +3331,7 @@ SceneRoots:
   - {fileID: 1251291084}
   - {fileID: 402978431}
   - {fileID: 206298094}
+  - {fileID: 1673928020}
   - {fileID: 177322010543143986}
   - {fileID: 362823536}
   - {fileID: 323262131}

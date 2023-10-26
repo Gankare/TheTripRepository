@@ -8,51 +8,54 @@ public class LevelTeleport : MonoBehaviour
 {
     public GameObject interactText;
     public GameObject mainCamera;
+    public Transform player;
     public Transform area1;
     public Transform area2;
     public Transform area3;
     public Transform area4;
-    public Transform area5;
+    private bool inArea;
 
-    public void OnTriggerStay2D(Collider2D collision)
+    public void Update()
+    {
+        if (inArea && Input.GetKeyDown(KeyCode.E))
+        {
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 1)
+            {
+                player.position = area1.transform.position;
+            }
+
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 2)
+            {
+                player.position = area2.transform.position;
+            }
+
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 3)
+            {
+                player.position = area3.transform.position;
+            }
+
+            if (mainCamera.GetComponent<CameraFollow>().currentStage == 4)
+            {
+                player.position = area4.transform.position;
+            }
+
+            mainCamera.GetComponent<CameraFollow>().currentStage++;
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             interactText.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                if (mainCamera.GetComponent<CameraFollow>().currentStage == 1)
-                {
-                    collision.transform.position = area1.transform.position;
-                }
-
-                if (mainCamera.GetComponent<CameraFollow>().currentStage == 2)
-                {
-                    collision.transform.position = area2.transform.position;
-                }
-
-                if (mainCamera.GetComponent<CameraFollow>().currentStage == 3)
-                {
-                    collision.transform.position = area3.transform.position;
-                }
-
-                if (mainCamera.GetComponent<CameraFollow>().currentStage == 4)
-                {
-                    collision.transform.position = area4.transform.position;
-                }
-
-                if (mainCamera.GetComponent<CameraFollow>().currentStage == 5)
-                {
-                    collision.transform.position = area5.transform.position;
-                }
-
-                mainCamera.GetComponent<CameraFollow>().currentStage++;
-            }
+            inArea = true;
         } 
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
+        {
+            inArea = false;
             interactText?.SetActive(false);
+        }
     }
 }

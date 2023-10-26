@@ -28,46 +28,46 @@ public class CameraFollow : MonoBehaviour
                 width = bounds.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds.transform.position.x - width / 4,
-                    bounds.transform.position.y - height / 2, -10f);
-                maxValue = new Vector3(bounds.transform.position.x + width / 4,
-                    bounds.transform.position.y + height / 2, -10f);
+                minValues = new Vector3(bounds.transform.position.x - width / 6.2f,
+                    bounds.transform.position.y - height / 7, -10f);
+                maxValue = new Vector3(bounds.transform.position.x + width / 6.5f,
+                    bounds.transform.position.y + height / 7, -10f);
                 break;
             case 2:
                 width = bounds1.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds1.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds1.transform.position.x - width / 4,
-                    bounds1.transform.position.y - height / 2, -10f);
-                maxValue = new Vector3(bounds1.transform.position.x + width / 4,
-                    bounds1.transform.position.y + height / 2, -10f);
+                minValues = new Vector3(bounds1.transform.position.x - width / 3.6f,
+                    bounds1.transform.position.y - height / 3.4f, -10f);
+                maxValue = new Vector3(bounds1.transform.position.x + width / 3.6f,
+                    bounds1.transform.position.y + height / 3.4f, -10f);
                 break;
             case 3:
                 width = bounds2.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds2.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds2.transform.position.x - width / 4,
-                    bounds2.transform.position.y - height / 2, -10f);
-                maxValue = new Vector3(bounds2.transform.position.x + width / 4,
-                    bounds2.transform.position.y + height / 2, -10f);
+                minValues = new Vector3(bounds2.transform.position.x - width / 3.6f,
+                    bounds2.transform.position.y - height / 3.4f, -10f);
+                maxValue = new Vector3(bounds2.transform.position.x + width / 3.6f,
+                    bounds2.transform.position.y + height / 3.4f, -10f);
                 break;
             case 4:
                 width = bounds3.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds3.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds3.transform.position.x - width / 4,
-                    bounds3.transform.position.y - height / 2, -10f);
-                maxValue = new Vector3(bounds3.transform.position.x + width / 4,
-                    bounds3.transform.position.y + height / 2, -10f);
+                minValues = new Vector3(bounds3.transform.position.x - width / 3.6f,
+                    bounds3.transform.position.y - height / 3.4f, -10f);
+                maxValue = new Vector3(bounds3.transform.position.x + width / 3.6f,
+                    bounds3.transform.position.y + height / 3.4f, -10f);
                 break;
             case 5:
                 width = bounds4.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds4.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds4.transform.position.x - width / 4,
-                    bounds4.transform.position.y - height / 2, -10f);
-                maxValue = new Vector3(bounds4.transform.position.x + width / 4,
-                    bounds4.transform.position.y + height / 2, -10f);
+                minValues = new Vector3(bounds4.transform.position.x - width / 6.2f,
+                    bounds4.transform.position.y - height / 7, -10f);
+                maxValue = new Vector3(bounds4.transform.position.x + width / 6.5f,
+                    bounds4.transform.position.y + height / 7, -10f);
                 break;
             case 6:
                 width = bounds5.GetComponent<SpriteRenderer>().bounds.size.x;

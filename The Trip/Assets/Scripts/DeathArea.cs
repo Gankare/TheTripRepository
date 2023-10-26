@@ -10,7 +10,7 @@ public class DeathArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.position = playerPosition;
+            other.GetComponent<PlayerHealth>().PlayerDead();
         }
     }
 }

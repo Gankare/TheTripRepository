@@ -37,7 +37,7 @@ public class CameraFollow : MonoBehaviour
                 width = bounds1.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds1.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds1.transform.position.x - width / 3.6f,
+                minValues = new Vector3(bounds1.transform.position.x - width / 4f,
                     bounds1.transform.position.y - height / 3.4f, -10f);
                 maxValue = new Vector3(bounds1.transform.position.x + width / 3.6f,
                     bounds1.transform.position.y + height / 3.4f, -10f);
@@ -46,7 +46,7 @@ public class CameraFollow : MonoBehaviour
                 width = bounds2.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds2.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds2.transform.position.x - width / 3.6f,
+                minValues = new Vector3(bounds2.transform.position.x - width / 4f,
                     bounds2.transform.position.y - height / 3.4f, -10f);
                 maxValue = new Vector3(bounds2.transform.position.x + width / 3.6f,
                     bounds2.transform.position.y + height / 3.4f, -10f);
@@ -55,7 +55,7 @@ public class CameraFollow : MonoBehaviour
                 width = bounds3.GetComponent<SpriteRenderer>().bounds.size.x;
                 height = bounds3.GetComponent<SpriteRenderer>().bounds.size.y;
 
-                minValues = new Vector3(bounds3.transform.position.x - width / 3.6f,
+                minValues = new Vector3(bounds3.transform.position.x - width / 4f,
                     bounds3.transform.position.y - height / 3.4f, -10f);
                 maxValue = new Vector3(bounds3.transform.position.x + width / 3.6f,
                     bounds3.transform.position.y + height / 3.4f, -10f);

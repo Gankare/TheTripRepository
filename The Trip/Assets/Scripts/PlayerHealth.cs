@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Vector3 playerPosition = new Vector3(0f, -3.991798f, 0f);
     Rigidbody2D rb2D;
     Animator animator;
 

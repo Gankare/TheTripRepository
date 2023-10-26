@@ -78,13 +78,13 @@ public class Movement : MonoBehaviour
         //Lower movement speed when holding a object
         if (GrabOjectScript.holding)
         {
-            maxSpeed = 2.5f;
-            jumpPower = 7.5f;
+            maxSpeed = 3f;
+            jumpPower = 8f;
         }
         else
         {
-            maxSpeed = 5;
-            jumpPower = 10;
+            maxSpeed = 6;
+            jumpPower = 10.5f;
         }
 
         if (!onGround)

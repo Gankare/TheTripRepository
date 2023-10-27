@@ -15,12 +15,18 @@ public class CameraFollow : MonoBehaviour
     public GameObject bounds3;
     public GameObject bounds4;
     public GameObject bounds5;
-    public int currentStage = 1;
+    public static int currentStage;
     float width;
     float height;
 
+    private void Start()
+    {
+        if (currentStage == 0)
+            currentStage = 1;
+    }
     void Update()
     {
+        Debug.Log(currentStage);
         switch (currentStage)
         {
             case 1:

@@ -20,43 +20,43 @@ public class LevelTeleport : MonoBehaviour
     public GameObject highEffect4;
     public static bool cutScene = false;
     private bool inArea;
-    private AudioSource audio;
+    private AudioSource audioComponent;
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audioComponent = GetComponent<AudioSource>();
     }
     public void Update()
     {
         if (inArea && Input.GetKeyDown(KeyCode.E))
         {
-            if (mainCamera.GetComponent<CameraFollow>().currentStage == 1)
+            if (CameraFollow.currentStage == 1)
             {
                 StartCoroutine(HighEffectLevel1());
             }
 
-            if (mainCamera.GetComponent<CameraFollow>().currentStage == 2)
+            if (CameraFollow.currentStage == 2)
             {
                 StartCoroutine(HighEffectLevel2());
             }
 
-            if (mainCamera.GetComponent<CameraFollow>().currentStage == 3)
+            if (CameraFollow.currentStage == 3)
             {
                 StartCoroutine(HighEffectLevel3());
             }
 
-            if (mainCamera.GetComponent<CameraFollow>().currentStage == 4)
+            if (CameraFollow.currentStage == 4)
             {
                 StartCoroutine(HighEffectLevel4());
             }
 
-            mainCamera.GetComponent<CameraFollow>().currentStage++;
+            CameraFollow.currentStage++;
         }
     }
     public IEnumerator HighEffectLevel1()
     {
         post.SetActive(true);
-        audio.PlayOneShot(audio.clip);
+        audioComponent.PlayOneShot(audioComponent.clip);
         cutScene = true;
         highEffect1.SetActive(true);
         player.position = area1.transform.position;
@@ -67,7 +67,7 @@ public class LevelTeleport : MonoBehaviour
     }
     public IEnumerator HighEffectLevel2()
     {
-        audio.PlayOneShot(audio.clip);
+        audioComponent.PlayOneShot(audioComponent.clip);
         cutScene = true;
         highEffect2.SetActive(true);
         player.position = area2.transform.position;
@@ -78,7 +78,7 @@ public class LevelTeleport : MonoBehaviour
     }
     public IEnumerator HighEffectLevel3()
     {
-        audio.PlayOneShot(audio.clip);
+        audioComponent.PlayOneShot(audioComponent.clip);
         cutScene = true;
         highEffect3.SetActive(true);
         player.position = area3.transform.position;
@@ -89,7 +89,7 @@ public class LevelTeleport : MonoBehaviour
     }
     public IEnumerator HighEffectLevel4()
     {
-        audio.PlayOneShot(audio.clip);
+        audioComponent.PlayOneShot(audioComponent.clip);
         cutScene = true;
         highEffect4.SetActive(true);
         player.position = area4.transform.position;

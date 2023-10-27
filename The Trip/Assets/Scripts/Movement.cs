@@ -4,7 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     //Sound
-    private AudioSource audio;
+    private AudioSource audioComponent;
     //Animation
     private Animator animator;
     //For player facing direction
@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audioComponent = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && onGround)
         {
-            audio.PlayOneShot(audio.clip);
+            audioComponent.PlayOneShot(audioComponent.clip);
             animator.SetTrigger("Jumping");
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
             jumpButtonPressedTime = Time.time;

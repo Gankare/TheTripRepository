@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Diagnostics;
 
 public class SceneHandler : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class SceneHandler : MonoBehaviour
     private PauseGameScript pauseScript;
     private void Start()
     {
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            CameraFollow.currentStage = 1;
+        }
         fade.CrossFadeAlpha(1, 0, true);
         pauseScript = FindObjectOfType<PauseGameScript>();
     }
@@ -24,7 +29,6 @@ public class SceneHandler : MonoBehaviour
     }
     public void QuitGame()
     {
-        Debug.Log("GameQuit");
         Application.Quit();
     }
     public void ResumeGame()

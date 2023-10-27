@@ -13,6 +13,7 @@ public class EndOfGameScript : MonoBehaviour
     public GameObject endGameText2;
     private AudioSource endGameSound;
     public static bool gameEnded;
+    public GameObject wtfText;
 
     private void Start()
     { 
@@ -29,6 +30,7 @@ public class EndOfGameScript : MonoBehaviour
     }
     public IEnumerator EndGame()
     {
+        Destroy(wtfText);
         gameEnded = true;
         endGameSound.PlayOneShot(endGameSound.clip);
         endGameFade.CrossFadeAlpha(255, 2, true);

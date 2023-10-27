@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReloadSceneOnDeath()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

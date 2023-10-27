@@ -76,7 +76,7 @@ public class CameraFollow : MonoBehaviour
                 minValues = new Vector3(bounds5.transform.position.x - width / 4,
                     bounds5.transform.position.y - height / 2, -10f);
                 maxValue = new Vector3(bounds5.transform.position.x + width / 4,
-                    bounds5.transform.position.y + height / 2, -10f);
+                    bounds5.transform.position.y + height / 4, -10f);
                 break;
 
             default:

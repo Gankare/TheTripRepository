@@ -35,7 +35,7 @@ public class SceneHandler : MonoBehaviour
     {
         fade.CrossFadeAlpha(255, 1, true);
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
     IEnumerator GoToMenuAfter()
     {

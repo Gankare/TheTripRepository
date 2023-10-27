@@ -1223,7 +1223,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1832967435122813317}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c22638ef1d59ac44e83fd1200fc1175c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2076,10 +2076,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: squack.. squack.. I recomend not getting turned into a meatcube.
+  m_text: squack.. squack.. I recomend not getting turned into a meatcube
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 13717320257dd124399cc2bd5c591001, type: 2}
+  m_sharedMaterial: {fileID: 7398515904414401600, guid: 13717320257dd124399cc2bd5c591001, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3340,7 +3340,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7170442682924382053}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c22638ef1d59ac44e83fd1200fc1175c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3531,8 +3531,8 @@ Transform:
   m_GameObject: {fileID: 7805293579219275281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4959981, y: 11.3376, z: 0}
-  m_LocalScale: {x: 44.471527, y: 24.037289, z: 1}
+  m_LocalPosition: {x: 3.4959981, y: 11.2, z: 0}
+  m_LocalScale: {x: 44.471527, y: 24.64198, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4514537870630237030}
@@ -3850,7 +3850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509.75, y: -298.44}
+  m_AnchoredPosition: {x: -509.842, y: -298.44}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6420924323305246017
@@ -3883,8 +3883,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Don't mind me, i'm just watching
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 13717320257dd124399cc2bd5c591001, type: 2}
+  m_sharedMaterial: {fileID: 7398515904414401600, guid: 13717320257dd124399cc2bd5c591001, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3908,7 +3908,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.05
+  m_fontSize: 20.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5610,7 +5610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4869200877054862676, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.912
+      value: 22.36
       objectReference: {fileID: 0}
     - target: {fileID: 4869200877054862676, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5647,6 +5647,26 @@ PrefabInstance:
     - target: {fileID: 4869200877054862676, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480884613743115991, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: level2
+      value: 
+      objectReference: {fileID: 2454352637927971348}
+    - target: {fileID: 8087998586541340303, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: m_text
+      value: (E) to eat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087998586541340303, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 13717320257dd124399cc2bd5c591001, type: 2}
+    - target: {fileID: 8087998586541340303, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782978592290662673, guid: 6f7f7e0ea3a9fdb4bb943f83082633e1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

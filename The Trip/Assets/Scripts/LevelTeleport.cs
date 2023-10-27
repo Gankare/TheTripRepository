@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class LevelTeleport : MonoBehaviour
 {
+    public GameObject post;
     public GameObject interactText;
     public GameObject mainCamera;
     public Transform player;
@@ -29,24 +30,28 @@ public class LevelTeleport : MonoBehaviour
             {
                 StartCoroutine(HighEffectLevel1());
                 player.position = area1.transform.position;
+                player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             }
 
             if (mainCamera.GetComponent<CameraFollow>().currentStage == 2)
             {
                 StartCoroutine(HighEffectLevel2());
                 player.position = area2.transform.position;
+                player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             }
 
             if (mainCamera.GetComponent<CameraFollow>().currentStage == 3)
             {
                 StartCoroutine(HighEffectLevel3());
                 player.position = area3.transform.position;
+                player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             }
 
             if (mainCamera.GetComponent<CameraFollow>().currentStage == 4)
             {
                 StartCoroutine(HighEffectLevel4());
                 player.position = area4.transform.position;
+                player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             }
 
             mainCamera.GetComponent<CameraFollow>().currentStage++;
@@ -58,6 +63,7 @@ public class LevelTeleport : MonoBehaviour
         highEffect1.SetActive(true);
         yield return new WaitForSeconds(3);
         highEffect1.SetActive(false);
+        post.SetActive(true);
         cutScene = false;
     }
     public IEnumerator HighEffectLevel2()
@@ -72,7 +78,7 @@ public class LevelTeleport : MonoBehaviour
     {
         cutScene = true;
         highEffect3.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         highEffect3.SetActive(false);
         cutScene = false;
     }
@@ -80,7 +86,7 @@ public class LevelTeleport : MonoBehaviour
     {
         cutScene = true;
         highEffect4.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         highEffect4.SetActive(false);
         cutScene = false;
     }

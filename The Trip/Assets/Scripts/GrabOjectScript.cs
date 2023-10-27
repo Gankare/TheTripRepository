@@ -27,6 +27,7 @@ public class GrabOjectScript : MonoBehaviour
             {
                 holding = true;
                 grabbedObject = hit.collider.gameObject;
+                grabbedObject.GetComponent<AudioSource>().Play();
                 grabbedObject.transform.position = holdPoint.position;
                 grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 grabbedObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
@@ -37,6 +38,7 @@ public class GrabOjectScript : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift) && grabbedObject != null)
         {
             holding = false;
+            grabbedObject.GetComponent<AudioSource>().Play();
             grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
             grabbedObject.GetComponentInParent<Animator>().SetBool("Holding", false);
             grabbedObject.GetComponentInParent<Animator>().SetTrigger("Throwing");

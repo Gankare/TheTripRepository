@@ -3,6 +3,8 @@ using UnityEngine;
 //This script is a clean powerful solution to a top-down movement player
 public class Movement : MonoBehaviour
 {
+    //Sound
+    private AudioSource audio;
     //Animation
     private Animator animator;
     //For player facing direction
@@ -25,6 +27,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        audio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
@@ -42,6 +45,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && onGround)
         {
+            audio.PlayOneShot(audio.clip);
             animator.SetTrigger("Jumping");
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
             jumpButtonPressedTime = Time.time;

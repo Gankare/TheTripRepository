@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     Rigidbody2D rb2D;
     Animator animator;
+    public AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void PlayerDead()
     {
+        audio.PlayOneShot(audio.clip);
         this.GetComponent<Movement>().enabled = false;
         rb2D.velocity = Vector3.zero;
         animator.SetTrigger("Dying");

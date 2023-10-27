@@ -9,7 +9,7 @@ public class PauseGameScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !gamePaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && !gamePaused && !EndOfGameScript.gameEnded)
         {
             gamePaused = true;
             pasueMenu.SetActive(true);

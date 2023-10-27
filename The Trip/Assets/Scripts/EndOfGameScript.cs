@@ -11,9 +11,11 @@ public class EndOfGameScript : MonoBehaviour
     public Image endGameFade;
     public GameObject endGame;
     private AudioSource endGameSound;
+    public static bool gameEnded;
 
     private void Start()
-    {
+    { 
+        gameEnded = false;
         endGameSound = GetComponent<AudioSource>();
         endGameFade.CrossFadeAlpha(1, 0, true);
     }
@@ -26,6 +28,7 @@ public class EndOfGameScript : MonoBehaviour
     }
     public IEnumerator EndGame()
     {
+        gameEnded = true;
         endGameSound.PlayOneShot(endGameSound.clip);
         endGameFade.CrossFadeAlpha(255, 2, true);
         yield return new WaitForSeconds(2);

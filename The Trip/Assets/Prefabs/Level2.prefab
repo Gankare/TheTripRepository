@@ -3568,7 +3568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Inhaling wd-40 is good for you
+  m_text: Inhaling wd-40 it's good for you
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13717320257dd124399cc2bd5c591001, type: 2}
   m_sharedMaterial: {fileID: 7398515904414401600, guid: 13717320257dd124399cc2bd5c591001, type: 2}
@@ -3595,7 +3595,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.4
+  m_fontSize: 23.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

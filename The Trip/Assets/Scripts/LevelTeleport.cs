@@ -55,6 +55,7 @@ public class LevelTeleport : MonoBehaviour
     }
     public IEnumerator HighEffectLevel1()
     {
+        post.SetActive(true);
         audio.PlayOneShot(audio.clip);
         cutScene = true;
         highEffect1.SetActive(true);
@@ -62,7 +63,6 @@ public class LevelTeleport : MonoBehaviour
         player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         yield return new WaitForSeconds(3);
         highEffect1.SetActive(false);
-        post.SetActive(true);
         cutScene = false;
     }
     public IEnumerator HighEffectLevel2()

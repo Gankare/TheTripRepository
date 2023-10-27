@@ -9,7 +9,8 @@ public class EndOfGameScript : MonoBehaviour
     public GameObject interactText;
     private bool inArea;
     public Image endGameFade;
-    public GameObject endGame;
+    public GameObject endGameText1;
+    public GameObject endGameText2;
     private AudioSource endGameSound;
     public static bool gameEnded;
 
@@ -32,8 +33,11 @@ public class EndOfGameScript : MonoBehaviour
         endGameSound.PlayOneShot(endGameSound.clip);
         endGameFade.CrossFadeAlpha(255, 2, true);
         yield return new WaitForSeconds(2);
-        endGame.SetActive(true);
-        yield return new WaitForSeconds(4);
+        endGameText1.SetActive(true);
+        yield return new WaitForSeconds(2);
+        endGameText1.SetActive(false);
+        endGameText2.SetActive(true);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("Menu");
     }
     public void OnTriggerEnter2D(Collider2D collision)

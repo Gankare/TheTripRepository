@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public Image fadeIn;
     public AudioSource audioComponent;
     public List<Transform> checkpoints = new List<Transform>();
+    public GameObject post;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
     public void loadNewScene()
     {
         transform.position = checkpoints[CameraFollow.currentStage -1].transform.position;
+        post.SetActive(true);
     }
     public void PlayerDead()
     {

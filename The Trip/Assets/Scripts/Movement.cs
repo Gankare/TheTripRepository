@@ -40,10 +40,10 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if(!LevelTeleport.cutScene) 
+        if(!EndOfGameScript.gameEnded && !LevelTeleport.cutScene) 
         MovementX();
 
-        if (Input.GetButtonDown("Jump") && onGround)
+        if (Input.GetButtonDown("Jump") && onGround && !EndOfGameScript.gameEnded && !LevelTeleport.cutScene)
         {
             audioComponent.PlayOneShot(audioComponent.clip);
             animator.SetTrigger("Jumping");

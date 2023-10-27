@@ -19,7 +19,6 @@ public class CameraFollow : MonoBehaviour
     float width;
     float height;
 
-    // Update is called once per frame
     void Update()
     {
         switch (currentStage)
@@ -85,15 +84,14 @@ public class CameraFollow : MonoBehaviour
                 break;
     
         }
-
+    }
+    public void FixedUpdate()
+    {
         Vector3 boundPosition = new Vector3(
                 Mathf.Clamp(player.position.x, minValues.x, maxValue.x),
                 Mathf.Clamp(player.position.y, minValues.y, maxValue.y),
                 Mathf.Clamp(player.position.z, minValues.z, maxValue.z));
 
-
-        //Vector3 newPos = new Vector3(player.position.x, player.position.y + yOffset, -10f);
         transform.position = Vector3.Slerp(transform.position, boundPosition, FollowSpeed * Time.deltaTime);
-
     }
 }
